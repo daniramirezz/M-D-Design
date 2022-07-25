@@ -1,2 +1,2 @@
 # M-D-Design
-Githib for pod 18 
+Github for pod 18 
