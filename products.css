@@ -1,0 +1,192 @@
+body {
+    background-image: url('https://hdwallsource.com/img/2014/5/simple-blue-background-43921-45008-hd-wallpapers.jpg');
+  }
+  
+  /* get rid of bullet point*/
+  ul{
+    list-style: none;
+  }
+  
+  /* got rid of underline under each section*/
+  a{
+    text-decoration:none;
+  }
+  
+  
+  nav{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height:60px ;
+    background-color: #FFFFFF; 
+    box-shadow:2px 2px 12px rgba (0,0,0,2);
+    padding:0px 5%;
+  }
+  
+  
+  nav ul{
+    display:flex; 
+  }
+  
+  nav ul li a{
+    margin:30px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+  
+  /*Adjust "Daniela"*/ 
+  .logo{
+    color: black;
+    font-size: 25px;
+    font-weight: Bold;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+  
+  
+  /*What we do*/
+  
+  #whatWeDo {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+  }
+  
+  
+  .box {
+    float: right;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 70px;
+  }
+  
+  .box img {
+    height: 200px;
+    width: 200px;
+    z-index: -1; 
+    border-radius: 90%; 
+    float: left;
+  }
+  /* made text within section not appear so close to the border on the left and moved down the box so it wasnt so close to the nav bar*/
+  .text-container{
+    margin-left: 20px;
+    margin-top: 45px;
+  }
+  
+  .mainInfo {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      align-content: stretch;
+  
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+  }
+  
+  .mainInfo a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .column {
+    width: 25%;
+    float: right;
+    padding: 20px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5%;
+  }
+  
+  .card img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  
+  /*footer*/
+  footer {
+    background: white;
+    color: black;
+    margin-top: 10px;
+  
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  
+  
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    
+    position: absolute;
+    width: 99%;
+    bottom:-150%;
+  
+  }
+  
+  
+  
+  footer a {
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  
+  
+  
+  .internalLinks ul {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: 	space-around;
+  }
+  
+  .externalLinks {
+    display: flex;
+    justify-content: 	space-around;
+    align-items: center;
+      align-content: center;
+    padding-left: 10px;
+  }
+  
+  /* Padding help the home resume etc section not look so close together, put space between them and adjusts the font*/
+  .internalLinks li {
+    padding: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+  
+  .externalLinks ul {
+    list-style-type: none;
+    text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    margin-left: 0px;
+    padding-left: 20px;
+      align-items: center;
+      align-content: center;
+  }
+  
+  .externalLinks li {
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-right: 20px;
+  }
+  
+  .copyright {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  
