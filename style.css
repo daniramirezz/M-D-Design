@@ -55,3 +55,18 @@ nav a{
     margin: 10px;
     color: aliceblue;
 }
+.about-us{
+    display: grid;
+    height: 50em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em  24em;
+    grid-template-areas: 
+    "left-column right-column";
+    background-color: rgb(199,206,234);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    /* border-width: 15px;
+    border-style: ridge;
+    border-color: rgb(141,153,186); */
+}
