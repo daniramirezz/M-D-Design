@@ -9,7 +9,7 @@
 }
 header{
     height: 100px;
-    background: #000;
+    background: rgb(199,206,234);
     width: 100%;
     z-index: 12;
     position: fixed;
@@ -25,7 +25,10 @@ header{
     cursor: pointer;
 
 }
-
+.pplogo{
+    height: 12.5em;
+    width: 12.5em;
+}
 nav{
     float: right;
     line-height: 100px;
