@@ -4,12 +4,13 @@
 }
 
 .wrapper{
-    width:1170px;
+    width:100%;
     margin: 0 auto;
 }
 header{
-    height: 100px;
-    background: rgb(199,206,234);
+    height: 105px;
+    /* background: rgb(199,206,234); */
+    background-image: url(https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/a19153fcf2187fb464cbebabb7000a20.jpg);
     width: 100%;
     z-index: 12;
     position: fixed;
@@ -22,22 +23,35 @@ header{
     top: -51px;
     transform: scale(.5);
     float: left;
-    cursor: pointer;
+
 
 }
 .pplogo{
-    height: 12.5em;
-    width: 12.5em;
+    /* height: 12.5em;
+    width: 12.5em; */
+    height: 3em;
+    width: 3em;
+    border-radius: 8em;
+}
+.compName{
+    /* margin-top: .2em; */
+    color: rgb(184,76,101);
+    display: flex;
+    margin-left: 5em;
+    justify-content: left;
+    font-family: 'Alex Brush', cursive;
+    font-size: 2em;
 }
 nav{
     float: right;
-    line-height: 100px;
+    line-height: 4px;
+    margin-top: -8px;
 }
 nav a{
     text-decoration: none;
     font-family: "Big Caslon";
     letter-spacing: 4px;
     font-size: 20px;
-    margin: 0 10px;
+    margin: 10px;
     color: aliceblue;
 }
