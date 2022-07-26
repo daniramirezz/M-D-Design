@@ -10,13 +10,17 @@
 header{
     height: 105px;
     /* background: rgb(199,206,234); */
-    background-image: url(https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/a19153fcf2187fb464cbebabb7000a20.jpg);
+    background-image: url(https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/a19153fcf2187fb464cbebabb7000a20.jpg) ;
     width: 100%;
     z-index: 12;
     position: fixed;
 
 }
-
+.logo1{
+    border-radius: 15em;
+    position: fixed;
+    top: 10em;
+}
 .logo{
     position: fixed;
     left: 0px;
@@ -57,7 +61,7 @@ nav a{
 }
 .about-us{
     display: grid;
-    height: 50em;
+    height: 25em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3em  24em;
     grid-template-areas: 
@@ -69,4 +73,55 @@ nav a{
 }
 .logo2{
     margin-top: 10em;
+    margin-left: 5em;
+    height: 10em;
 }
+.info{
+    margin-top: 10em;
+    margin-right: 5em;
+    height: 10em;
+}
+.info-pt2{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em  24em;
+    grid-template-areas: 
+    "left-column right-column";
+}
+.info-pt2 > div {
+    margin: 2em;
+}
+.contact_us{
+    display: grid;
+    height: 30em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em  24em;
+    grid-template-areas: 
+    "left-column right-column";
+    background-image: url(https://texasheritageforliving.com/wp-content/uploads/2022/06/Picnics-Header-Photo-by-Natalie-Goff-Food-Styling-by-Jen-Jones-Prop-Styling-by-Kylie-Valigura.jpg);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+.Information{
+    background: rgba(252,247,222,0.83) url("") no-repeat local 50% 50%;
+    height: 25em;
+    position: center;
+    margin-top: 2em;
+}
+.intro{
+    position: center;
+}
+.time{
+    position: center;
+}
+
+/* section{
+    border-style: dashed;
+    border-width: 5px;
+} */
