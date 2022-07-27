@@ -278,6 +278,7 @@ footer {
     .about-us{
         width: 100%;
     }
+}
 @media screen and (max-width:325px){
     body {width: 320px}
     .wrapper{
@@ -285,23 +286,29 @@ footer {
     }
     header{ height: auto;}
     .logo1{ height: 10em;
-            width: 10em;}
-    /* .pplogo{
-        width: ; */
+            width: 10em;
+            position: static;}
+    nav{
+        width: 320px;
+    }
+    nav a{
+        font-size: .75em;
     }
     .compName{
         font-size: 1em;
     }
     .about-us{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
     }
+    .info{
+        position: static;
+        height: fit-content;}
     footer{
         width: 320px;
-    }
-    /* .logo{ width: 280px;}
-    #fresh { width: 280px;}
-    #comment{width: 280px;}
-    #table{width: 280px;}
-    h1{font-size:2em;}
-    h2{font-size:.80em;} */
-}
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }}
