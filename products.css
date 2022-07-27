@@ -178,15 +178,11 @@ nav a{
     background: white;
     color: black;
     margin-top: 10px;
-  
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-  
-  
-    font-family: 'Barlow Condensed', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Alex Brush', cursive;
     font-size: 25px;
-    
     position: absolute;
     width: 99%;
     bottom:-150%;
@@ -238,7 +234,7 @@ nav a{
   }
   
   .externalLinks li {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Alex Brush', cursive;
     margin-right: 20px;
   }
   

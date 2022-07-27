@@ -61,7 +61,7 @@ nav a{
 }
 .about-us{
     display: grid;
-    height: 25em;
+    height: 26em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3em  24em;
     grid-template-areas: 
@@ -80,6 +80,7 @@ nav a{
     margin-top: 10em;
     margin-right: 5em;
     height: 10em;
+    text-align: center;
 }
 .info-pt2{
     display: flex;
@@ -113,15 +114,194 @@ nav a{
     height: 25em;
     position: center;
     margin-top: 2em;
+    margin-right: 2em;
 }
 .intro{
-    position: center;
+    text-align: center;
+    display:flex;
+    justify-content: center;
 }
 .time{
-    position: center;
+    display:flex;
+    justify-content: center;
 }
+.infoForm{
+    text-align: center;
+    margin-top: 3em;
+    /* display:list-item; */
+    /* justify-content: center; */
+}
+.reviews{
+    display: grid;
+    height: 20em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em  24em;
+    grid-template-areas: 
+    "left-column right-column";
+    background-color: rgb(253,209,225);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+footer {
+    background: white;
+    color: black;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    position: absolute;
+    width: 99%;
+    bottom:auto;
+  }
+  
+  
+  
+  footer a {
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  
+  
+  
+  .internalLinks ul {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: 	space-around;
+  }
+  
+  .externalLinks {
+    display: flex;
+    justify-content: 	space-around;
+    align-items: center;
+      align-content: center;
+    padding-left: 10px;
+  }
+  
+  /* Padding help the home resume etc section not look so close together, put space between them and adjusts the font*/
+  .internalLinks li {
+    padding: 10px;
+    font-family: 'Alex Brush', cursive;
+  }
+  
+  .externalLinks ul {
+    list-style-type: none;
+    text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    margin-left: 0px;
+    padding-left: 20px;
+      align-items: center;
+      align-content: center;
+  }
+  
+  .externalLinks li {
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-right: 20px;
+  }
+  
+  .copyright {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  
 
 /* section{
     border-style: dashed;
     border-width: 5px;
 } */
+
+
+/* responsive design */
+
+@media screen and (max-width:1024px){
+    header{ height: auto;}
+    .logo1{ height: 10em;
+            width: 10em;}
+    /* .pplogo{
+    } */
+    .compName{
+        font-size: 1em;
+    }
+    .about-us{
+        width: 100%;
+    }
+}
+@media screen and (max-width:770px) {
+    .wrapper{
+        width: auto;
+    }
+    header{ height: auto;
+            width: auto;}
+    .logo1{ height: 10em;
+            width: 10em;}
+    /* .pplogo{
+    } */
+    .compName{
+        font-size: 1em;
+    }
+    .about-us{
+        width: 100%;
+    }
+}
+@media screen and (max-width:440px){
+    header{ height: auto;}
+    .logo1{ height: 10em;
+            width: 10em;}
+    /* .pplogo{
+    } */
+    .compName{
+        font-size: 1em;
+    }
+    .about-us{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:380px) {
+    header{ height: auto;}
+    .logo1{ height: 10em;
+            width: 10em;}
+    /* .pplogo{
+    } */
+    .compName{
+        font-size: 1em;
+    }
+    .about-us{
+        width: 100%;
+    }
+@media screen and (max-width:325px){
+    body {width: 320px}
+    .wrapper{
+        width: 320px;
+    }
+    header{ height: auto;}
+    .logo1{ height: 10em;
+            width: 10em;}
+    /* .pplogo{
+        width: ; */
+    }
+    .compName{
+        font-size: 1em;
+    }
+    .about-us{
+        width: 100%;
+    }
+    footer{
+        width: 320px;
+    }
+    /* .logo{ width: 280px;}
+    #fresh { width: 280px;}
+    #comment{width: 280px;}
+    #table{width: 280px;}
+    h1{font-size:2em;}
+    h2{font-size:.80em;} */
+}
