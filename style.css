@@ -115,6 +115,7 @@ nav a{
     position: center;
     margin-top: 2em;
     margin-right: 2em;
+    text-align: center;
 }
 .intro{
     text-align: center;
@@ -143,7 +144,33 @@ nav a{
     margin-right: auto;
     margin-top: auto;
 }
-
+.rate{
+    margin-top: 2em;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+.rating{
+        justify-content: center;
+}
+.star_rating{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.star{
+    font-size: 5em;
+    color:rgb(255,218,193);
+    background-color: unset;
+    border:none;
+    text-shadow: #474747 3px 5px 2px, 2px 2px 0px rgba(184,76,101,0.41);
+}
+.star:hover{
+    cursor: pointer;
+}
 footer {
     background: white;
     color: black;
@@ -214,21 +241,50 @@ footer {
   }
   
 
-section{
+/* section{
     border-style: dashed;
     border-width: 2px;
     border-color: black;
-}
+} */
 
 
 /* responsive design */
-
+@media screen and (max-width:1060px){
+    .logo2 {
+        margin-top: 8em;
+        margin-left: 1em;
+        height: 8em;
+    }
+    .info{
+        height: fit-content;
+        margin-top: 8em;}
+}
+@media screen and (max-width:900px){
+    .about-us{
+        height: fit-content;
+    }
+    .logo1{
+        height: 14em;
+        width: 14em;
+        align-content: center;
+        margin-top: .5em;
+    }
+    .logo2 {
+         margin-top: 5em;
+        margin-left: 1em;
+        height: 10em;
+     }
+    .info{
+    height: fit-content;
+    width: fit-content;
+    margin-top: 7em;}
+}
 @media screen and (max-width:770px) {
     body {width: 768px}
     .wrapper{
         width: 768px;
     }
-    header{ height: auto;
+    header{ height: 4em;
             width: 768px;}
     .logo1{ height: 20em;
             width: 20em;
