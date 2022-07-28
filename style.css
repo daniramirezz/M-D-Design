@@ -21,7 +21,7 @@ header{
     position: fixed;
     top: 10em;
 }
-.logo{
+/* .logo{
     position: fixed;
     left: 0px;
     top: -51px;
@@ -29,7 +29,7 @@ header{
     float: left;
 
 
-}
+} */
 .pplogo{
     /* height: 12.5em;
     width: 12.5em; */
@@ -115,6 +115,7 @@ nav a{
     position: center;
     margin-top: 2em;
     margin-right: 2em;
+    text-align: center;
 }
 .intro{
     text-align: center;
@@ -143,7 +144,33 @@ nav a{
     margin-right: auto;
     margin-top: auto;
 }
-
+.rate{
+    margin-top: 2em;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+.rating{
+        justify-content: center;
+}
+.star_rating{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.star{
+    font-size: 5em;
+    color:rgb(255,218,193);
+    background-color: unset;
+    border:none;
+    text-shadow: #474747 3px 5px 2px, 2px 2px 0px rgba(184,76,101,0.41);
+}
+.star:hover{
+    cursor: pointer;
+}
 footer {
     background: white;
     color: black;
@@ -216,83 +243,114 @@ footer {
 
 /* section{
     border-style: dashed;
-    border-width: 5px;
+    border-width: 2px;
+    border-color: black;
 } */
 
 
 /* responsive design */
-
-@media screen and (max-width:1024px){
-    header{ height: auto;}
-    .logo1{ height: 10em;
-            width: 10em;}
-    /* .pplogo{
-    } */
-    .compName{
-        font-size: 1em;
+@media screen and (max-width:1060px){
+    .logo2 {
+        margin-top: 8em;
+        margin-left: 1em;
+        height: 8em;
     }
+    .info{
+        height: fit-content;
+        margin-top: 8em;}
+}
+@media screen and (max-width:900px){
     .about-us{
-        width: 100%;
+        height: fit-content;
     }
+    .logo1{
+        height: 14em;
+        width: 14em;
+        align-content: center;
+        margin-top: .5em;
+    }
+    .logo2 {
+         margin-top: 5em;
+        margin-left: 1em;
+        height: 10em;
+     }
+    .info{
+    height: fit-content;
+    width: fit-content;
+    margin-top: 7em;}
 }
 @media screen and (max-width:770px) {
+    body {width: 768px}
     .wrapper{
-        width: auto;
+        width: 768px;
     }
-    header{ height: auto;
-            width: auto;}
-    .logo1{ height: 10em;
-            width: 10em;}
-    /* .pplogo{
-    } */
-    .compName{
-        font-size: 1em;
+    header{ height: 4em;
+            width: 768px;}
+    .logo1{ height: 20em;
+            width: 20em;
+            }
+    .logo2 {
+        margin-top: 10em;
+        margin-left: 1em;
+        height: 10em;
     }
-    .about-us{
-        width: 100%;
+    .pplogo{
+        text-align: left;
     }
-}
-@media screen and (max-width:440px){
-    header{ height: auto;}
-    .logo1{ height: 10em;
-            width: 10em;}
-    /* .pplogo{
-    } */
-    .compName{
-        font-size: 1em;
-    }
-    .about-us{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width:380px) {
-    header{ height: auto;}
-    .logo1{ height: 10em;
-            width: 10em;}
-    /* .pplogo{
-    } */
-    .compName{
-        font-size: 1em;
-    }
-    .about-us{
-        width: 100%;
-    }
-}
-@media screen and (max-width:325px){
-    body {width: 320px}
-    .wrapper{
-        width: 320px;
-    }
-    header{ height: auto;}
-    .logo1{ height: 10em;
-            width: 10em;
-            position: static;}
-    nav{
-        width: 320px;
+    /* nav{
+        width: 768px;
     }
     nav a{
         font-size: .75em;
+    } */
+    .compName{
+        font-size: 1em;
+    }
+    .logo1{
+        /* height: 1em; */
+        align-content: center;
+        /* margin-top: 5em;
+        margin-left: 5em; */
+    }
+    .info{
+        height: fit-content;
+        margin-top: 5em;
+    }
+    footer{
+        width: 750px;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }}
+@media screen and (max-width:440px){
+    body {width: 425px}
+    .wrapper{
+        width: 425px;
+    }
+    header{  height: 5.5em;
+        width: 425px}
+    .logo1{
+            height: 14em;
+            width: 14em;
+            position: static;
+            align-content: center;
+            margin-top: .5em;
+            margin-left: 5em;
+        }
+    .logo2 {
+      margin-top: 5em;
+      margin-left: 1em;
+      height: 10em;
+         }
+    .pplogo{
+        text-align: left;
+    }
+    nav{
+        float: right;
+        margin-top: 1em;
+    }
+    nav a{
+        font-size: 1em;
     }
     .compName{
         font-size: 1em;
@@ -302,10 +360,211 @@ footer {
         display: flex;
         flex-direction: column;
         height: fit-content;
+        align-content: center;
     }
     .info{
         position: static;
-        height: fit-content;}
+        height: fit-content;
+        width: 425px;
+        align-items: center;
+    }
+    .intro{
+        position: static;
+        height: fit-content;
+        width: 425px;
+        align-items: center;
+    }
+    .time{
+        position: static;
+        height: fit-content;
+        width: 425px;
+        align-items: center;
+    }
+    .contact_us{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-content: center;
+    }
+    .Information{
+        position: static;
+        height: fit-content;
+        width: 400px;
+        align-items: center;
+        margin-top: .5em;
+        margin-bottom: .5em;
+        margin-left: .5em;
+        margin-right: .5em;
+
+    }
+    footer{
+        width: 425px;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }}
+
+@media screen and (max-width:380px) {
+    body {width: 375px}
+    .wrapper{
+        width: 375px;
+    }
+    header{ height: 6em;
+        width: 375px}
+    .logo1{ height: 12em;
+            width: 12em;
+            position: static;}
+    .logo2 {
+      margin-top: 10em;
+      margin-left: .2em;
+      height: 10em;
+    }
+    .pplogo{
+        text-align: left;
+    }
+    nav{
+        float: right;
+        margin-top: 2em;
+    }
+    nav a{
+        font-size: .9em;
+        margin-top: 1em;
+    }
+    .compName{
+        font-size: 1em;
+    }
+    .about-us{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-content: center;
+    }
+    .logo1{
+        align-content: center;
+        margin-top: 1.5em;
+        margin-left: 5em;
+    }
+    .logo2 {
+        margin-top: 10em;
+        margin-left: .5em;
+        height: 10em;
+      }
+    .info{
+        position: static;
+        height: fit-content;
+        width: 375px;
+        align-items: center;
+    }
+    .intro{
+        position: static;
+        height: fit-content;
+        width: 375px;
+        align-items: center;
+    }
+    .time{
+        position: static;
+        height: fit-content;
+        width: 375px;
+        align-items: center;
+    }
+    .contact_us{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-content: center;
+    }
+    .Information{
+        position: static;
+        height: fit-content;
+        width: 300px;
+        align-items: center;
+        margin-top: .5em;
+        margin-bottom: .5em;
+        margin-left: 2.5em;
+        margin-right: .5em;
+
+    }
+    footer{
+        width: 375px;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }}
+@media screen and (max-width:325px){
+    body {width: 320px}
+    .wrapper{
+        width: 320px;
+    }
+    header{ height: 8em;
+    width: 320px;}
+    .logo1{ height: 11.5em;
+            width: 11.5em;
+            position: static;}
+    .pplogo{
+        text-align: left;
+    }
+    nav{
+            float: right;
+            margin-right: .2em;
+    }
+    nav a{
+        font-size: .8em;
+    }
+    .compName{
+        font-size: 1em
+        ;
+    }
+    .about-us{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-content: center;
+    }
+    .logo1{
+        align-content: center;
+        margin-top: 1.5em;
+        margin-left: 5em;
+    }
+    .info{
+        position: static;
+        height: fit-content;
+        width: 320px;
+        align-items: center;
+    }
+    .intro{
+        position: static;
+        height: fit-content;
+        width: 320px;
+        align-items: center;
+    }
+    .time{
+        position: static;
+        height: fit-content;
+        width: 320px;
+        align-items: center;
+    }
+    .contact_us{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-content: center;
+    }
+    .Information{
+        position: static;
+        height: fit-content;
+        width: 300px;
+        align-items: center;
+        margin-top: .5em;
+        margin-bottom: .5em;
+        margin-left: .5em;
+        margin-right: .5em;
+
+    }
     footer{
         width: 320px;
         margin: 0;
