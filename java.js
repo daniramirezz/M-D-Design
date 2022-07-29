@@ -15,7 +15,12 @@ allStars.forEach((star,i) =>{
 
 
 function initMap(){
-
+    const image ="https://i.pinimg.com/564x/5b/86/69/5b8669a4f0b264687c87762d06393351.jpg"
+    const iconBase =
+    "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
+    var picnic= {
+          icon: iconBase + 'logo.jpg'
+        };
     //map option
     var options= {
         center:{lat: 35.235608185325866 , lng: -80.8329717935946},
@@ -28,7 +33,11 @@ function initMap(){
     const markerFP = new google.maps.Marker({
         position:{lat: 35.1917349071713 , lng: -80.84283149706101},
         map:map,
-        icon:"https://img.icons8.com/nolan/2x/marker.png",
+        picnic,
+        // icon:{ 
+        //     url:"https://i.pinimg.com/564x/5b/86/69/5b8669a4f0b264687c87762d06393351.jpg",
+        //     scaledSize: new google.maps.Size(38,35)
+        // }
     });
     const markerFW = new google.maps.Marker({
         position:{lat: 35.22787088862163, lng: -80.83644270894142},
