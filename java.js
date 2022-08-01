@@ -13,11 +13,11 @@ allStars.forEach((star,i) =>{
     }
 })
 
-
+35.39384928780973, -80.80765201975048
 function initMap(){
     //map option
     var options= {
-        center:{lat: 35.235608185325866 , lng: -80.8329717935946},
+        center:{lat: 35.39384928780973 , lng: -80.80765201975048},
         zoom: 10
     }
     //new map
@@ -123,62 +123,63 @@ function initMap(){
                 console.log(resp);
                 let row = document.querySelector('.weather.row');
                  row.innerHTML=resp.daily
-                 console.log(resp.daily)
                  .map((day, idx)=> {
-                    if(idx<= 2){
+                    if(idx <= 2){
                         let dt = new Date(day.dt *1000);
                     return `
                     <div class="column">
-                    <div class="card" style="width: 10vw;">
-                    <h5 class="card-title">${dt.toDateString}</h5>
+                    <div class="card">
+                    <h5 class="card-title">${dt.toDateString()}</h5>
                     <img class="card-img gx2"
-                    src="https://i.pinimg.com/564x/8a/e4/6f/8ae46f8ae5552d09ad8289b46f65cc55.jpg"
-                     alt="weather description" style="width:100%">
+                    src="http://openweathermap.org/img/wn/${
+                        day.weather[0].icon
+                    }@4x.png"
+                     alt="${day.weather[0].main}" style="width:100%">
                      <div class="card-body">
-                      <p class="card-text">weather label</p>
-                      <p class="card-text">High temp Low Temp</p>
-                      <p class="card-text">Precipitation</p>
+                      <p class="card-text">${day.weather[0].main}</p>
+                      <p class="card-text"> High ${day.temp.max}&deg;F</p>
+                      <p class="card-text">Low ${day.temp.min} &deg;F </p>
+                      <p class="card-text"> High Feels Like ${day.feels_like.day}&deg;F</p>
+                      <p class="card-text">Precipitation ${Math.round(day.pop * 100)}%</p>
                     </div>
                 </div>
                 </div>
                 </div>`;
                     }
-                 }).join('');
+                 }).join(' ');
             }
-            fetchWeather()
-            showWeather()    
         }
         addMarker({location:{lat: 35.1917349071713 , lng: -80.84283149706101},
             content:`<h2>This is Fredom Park</h2>`,
 
         });
-        // addMarker({location:{lat: 35.22787088862163, lng: -80.83644270894142},
-        //     content:`<h2>This is First Ward Park </h2>` 
-        // });
-        // addMarker({location:{lat: 35.227912191079874 , lng: -80.84799669819279},
-        //     content:`<h2>This is Romare Bearden Park </h2>`
-        // });
-        // addMarker({location:{lat: 35.22411275362518 , lng: -80.84683839686869},
-        //     content:`<h2>This is The Green</h2>`
-        // });
-        // addMarker({location:{lat: 35.21927366698338, lng: -80.83877258285202},
-        //     content:`<h2>This is Marshall Park </h2>`
-        // });
-        // addMarker({location:{lat: 35.45361821478076, lng: -80.9395969510643},
-        //     content:`<h2>This is Lake Norman</h2>`
-        // });
-        // addMarker({location:{lat: 35.46769403801058, lng: -80.90225576865217},
-        //     content:`<h2>This is Ramsey Creek Park </h2>`
-        // });
-        // addMarker({location:{lat: 35.60472818411696, lng: -80.76553937046916},
-        //     content:`<h2>This is the quarry at Carrigan Farms </h2>`
-        // });
-        // addMarker({location:{lat: 35.30782868913804, lng: -80.7297389438208},
-        //     content:`<h2>This is the Botanical Gardens at UNCC </h2>`
-        // });
-        // addMarker({location:{lat: 35.225898410181394, lng: -80.95619692199527},
-        //     content:`<h2>This is the CLT Airport Overlook </h2>`
-        // });
+        addMarker({location:{lat: 35.22787088862163, lng: -80.83644270894142},
+            content:`<h2>This is First Ward Park </h2>` 
+        });
+        addMarker({location:{lat: 35.227912191079874 , lng: -80.84799669819279},
+            content:`<h2>This is Romare Bearden Park </h2>`
+        });
+        addMarker({location:{lat: 35.22411275362518 , lng: -80.84683839686869},
+            content:`<h2>This is The Green</h2>`
+        });
+        addMarker({location:{lat: 35.21927366698338, lng: -80.83877258285202},
+            content:`<h2>This is Marshall Park </h2>`
+        });
+        addMarker({location:{lat: 35.45361821478076, lng: -80.9395969510643},
+            content:`<h2>This is Lake Norman</h2>`
+        });
+        addMarker({location:{lat: 35.46769403801058, lng: -80.90225576865217},
+            content:`<h2>This is Ramsey Creek Park </h2>`
+        });
+        addMarker({location:{lat: 35.60472818411696, lng: -80.76553937046916},
+            content:`<h2>This is the quarry at Carrigan Farms </h2>`
+        });
+        addMarker({location:{lat: 35.30782868913804, lng: -80.7297389438208},
+            content:`<h2>This is the Botanical Gardens at UNCC </h2>`
+        });
+        addMarker({location:{lat: 35.225898410181394, lng: -80.95619692199527},
+            content:`<h2>This is the CLT Airport Overlook </h2>`
+        });
 
 
 

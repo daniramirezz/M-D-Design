@@ -250,11 +250,11 @@ footer {
   }
   
 
-section{
+/* section{
     border-style: dashed;
     border-width: 2px;
     border-color: black;
-}
+} */
 
 /* responsive design */
 @media screen and (max-width:1060px){
