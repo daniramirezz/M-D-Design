@@ -106,9 +106,9 @@ function initMap(){
                 // var temp= document.querySelector('.temp');
                 // var precipitation= document.querySelector('.precipitation');
                 let key = 'd57cae28ee4c23bd93ad7db81a78cb9c';
-                let units= 'metric';
+                let units= 'imperial';
                 let lang = 'en'
-                let url =`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&=units${units}&appid=${key}`;
+                let url =`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=${units}&appid=${key}`;
                 fetch(url)
                     .then(resp=>{
                         if(!resp.ok) throw new Error(resp.statusText);
@@ -122,6 +122,12 @@ function initMap(){
             function showWeather(resp){
                 console.log(resp);
                 let row = document.querySelector('.weather.row');
+
+
+                //  row.innerHTML=resp.daily
+                //  .map((day)=> {
+                //     return '<p>Day</p>'
+                //  }).join(' ');
                 let html = `<div class="card" style="width: 30vw;">
                 <h5 class="card-title"> Date </h5>
                 <img class="card-img gx2"
