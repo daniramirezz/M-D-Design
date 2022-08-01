@@ -77,6 +77,7 @@ function initMap(){
 
         //Add Marker function
         function addMarker(property){
+            // console.log(property.location.lat)
 
             const marker = new google.maps.Marker({
                 position:property.location,
@@ -89,21 +90,60 @@ function initMap(){
 
             if(property.content){
                 const detailWindow = new google.maps.InfoWindow({
-                    content:property.content
+                    content:property.content,
                 });
-    
                 marker.addListener("click",()=>{
                     detailWindow.open(map, marker);
+                    fetchWeather();
+                    showWeather();
                 })
 
             }
-
+            function fetchWeather (ev){
+                let lat= property.location.lat
+                let lon= property.location.lng
+                // var label= document.querySelector('.weather-label');
+                // var temp= document.querySelector('.temp');
+                // var precipitation= document.querySelector('.precipitation');
+                let key = 'd57cae28ee4c23bd93ad7db81a78cb9c';
+                let units= 'metric';
+                let lang = 'en'
+                let url =`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&=units${units}&appid=${key}`;
+                fetch(url)
+                    .then(resp=>{
+                        if(!resp.ok) throw new Error(resp.statusText);
+                        return resp.json()
+                    })
+                    .then(data=>{
+                        showWeather(data);
+                    })
+                    .catch(console.err)
+            }
+            function showWeather(resp){
+                console.log(resp);
+                let row = document.querySelector('.weather.row');
+                let html = `<div class="card" style="width: 30vw;">
+                <h5 class="card-title"> Date </h5>
+                <img class="card-img gx2"
+                src="https://i.pinimg.com/564x/8a/e4/6f/8ae46f8ae5552d09ad8289b46f65cc55.jpg"
+                 alt="weather description" style="width:100%">
+                 <div class="card-body">
+                  <p class="card-text">weather label</p>
+                  <p class="card-text">High temp Low Temp</p>
+                  <p class="card-text">Precipitation</p>
+                </div>
+            </div>
+            </div>`
+            }
+            fetchWeather()
+            showWeather()    
         }
         addMarker({location:{lat: 35.1917349071713 , lng: -80.84283149706101},
-            content:`<h2>This is Fredom Park</h2>`
+            content:`<h2>This is Fredom Park</h2>`,
+
         });
         addMarker({location:{lat: 35.22787088862163, lng: -80.83644270894142},
-            content:`<h2>This is First Ward Park </h2>`
+            content:`<h2>This is First Ward Park </h2>` 
         });
         addMarker({location:{lat: 35.227912191079874 , lng: -80.84799669819279},
             content:`<h2>This is Romare Bearden Park </h2>`
@@ -129,4 +169,43 @@ function initMap(){
         addMarker({location:{lat: 35.225898410181394, lng: -80.95619692199527},
             content:`<h2>This is the CLT Airport Overlook </h2>`
         });
+
+
+
+        // function fetchWeather (ev){
+        //     let lat= property.location.lat
+        //     let lon= property.location.lng
+        //     // var label= document.querySelector('.weather-label');
+        //     // var temp= document.querySelector('.temp');
+        //     // var precipitation= document.querySelector('.precipitation');
+        //     let key = 'd57cae28ee4c23bd93ad7db81a78cb9c';
+        //     let units= 'metric';
+        //     let lang = 'en'
+        //     let url =`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}`;
+        //     fetch(url)
+        //         .then(resp=>{
+        //             if(!resp.ok) throw new Error(resp.statusText);
+        //             return resp.json()
+        //         })
+        //         .then(data=>{
+        //             showWeather(data);
+        //         })
+        //         .catch(console.err)
+        // }
+        // function showWeather(resp){
+        //     console.log(resp);
+        //     let row = document.querySelector('.weather.row');
+        //     let html = `<div class="card" style="width: 30vw;">
+        //     <h5 class="card-title"> Date </h5>
+        //     <img class="card-img gx2"
+        //     src="https://i.pinimg.com/564x/8a/e4/6f/8ae46f8ae5552d09ad8289b46f65cc55.jpg"
+        //      alt="weather description" style="width:100%">
+        //      <div class="card-body">
+        //       <p class="card-text">weather label</p>
+        //       <p class="card-text">High temp Low Temp</p>
+        //       <p class="card-text">Precipitation</p>
+        //     </div>
+        // </div>
+        // </div>`
+        // }
 }
