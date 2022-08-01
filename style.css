@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 .wrapper{
     width:100%;
     margin: 0 auto;
@@ -58,7 +59,7 @@ nav a{
     letter-spacing: 4px;
     font-size: 20px;
     margin: 10px;
-    color: aliceblue;
+    color: #C7CEEA;
 }
 .about-us{
     display: grid;
@@ -82,6 +83,7 @@ nav a{
     margin-right: 5em;
     height: 10em;
     text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 .info-pt2{
     display: flex;
@@ -109,6 +111,7 @@ nav a{
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 .Information{
     background: rgba(252,247,222,0.83) url("") no-repeat local 50% 50%;
@@ -117,6 +120,7 @@ nav a{
     margin-top: 2em;
     margin-right: 2em;
     text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 .intro{
     text-align: center;
@@ -126,6 +130,7 @@ nav a{
 .time{
     display:flex;
     justify-content: center;
+    margin-bottom: 5em;
 }
 .infoForm{
     text-align: center;
@@ -144,6 +149,7 @@ nav a{
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 .rate{
     margin-top: 2em;
