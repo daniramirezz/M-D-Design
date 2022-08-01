@@ -20,6 +20,7 @@ header{
     border-radius: 15em;
     position: fixed;
     top: 10em;
+    border: 13px double #F0DEFD;
 }
 /* .logo{
     position: fixed;
@@ -163,7 +164,7 @@ nav a{
 }
 .star{
     font-size: 5em;
-    color:rgb(255,218,193);
+    color:rgb(184,76,101);
     background-color: unset;
     border:none;
     text-shadow: #474747 3px 5px 2px, 2px 2px 0px rgba(184,76,101,0.41);
@@ -173,16 +174,16 @@ nav a{
 }
 
 footer {
-    background: white;
+    background: rgb(255,218,193);
     color: black;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 25px;
     position: absolute;
-    width: 99%;
+    width: 100%;
     bottom:auto;
   }
   
@@ -242,12 +243,41 @@ footer {
   }
   
 
-/* section{
+section{
     border-style: dashed;
     border-width: 2px;
     border-color: black;
-} */
+}
 
+/* Styling for location page */
+.location{
+    display: grid;
+    height: 40em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em  24em;
+    grid-template-areas: 
+    "left-column right-column";
+    background-color: rgb(240,222,253);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+.maps{
+    margin-top: 9em;
+    height: 25em;
+}
+.weather{
+    margin-top: 9em;
+    height: 25em;
+}
+.discount{
+    background-color: antiquewhite;
+    height: 20em;
+}
+#map{
+    height: 700px;
+    width: 100%;
+}
 
 /* responsive design */
 @media screen and (max-width:1060px){
