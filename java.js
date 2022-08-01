@@ -122,24 +122,26 @@ function initMap(){
             function showWeather(resp){
                 console.log(resp);
                 let row = document.querySelector('.weather.row');
-
-
-                //  row.innerHTML=resp.daily
-                //  .map((day)=> {
-                //     return '<p>Day</p>'
-                //  }).join(' ');
-                let html = `<div class="card" style="width: 30vw;">
-                <h5 class="card-title"> Date </h5>
-                <img class="card-img gx2"
-                src="https://i.pinimg.com/564x/8a/e4/6f/8ae46f8ae5552d09ad8289b46f65cc55.jpg"
-                 alt="weather description" style="width:100%">
-                 <div class="card-body">
-                  <p class="card-text">weather label</p>
-                  <p class="card-text">High temp Low Temp</p>
-                  <p class="card-text">Precipitation</p>
+                 row.innerHTML=resp.daily
+                 .map((day, idx)=> {
+                    if(idx<= 2){
+                    return `
+                    <div class="column">
+                    <div class="card" style="width: 10vw;">
+                    <h5 class="card-title"> Date </h5>
+                    <img class="card-img gx2"
+                    src="https://i.pinimg.com/564x/8a/e4/6f/8ae46f8ae5552d09ad8289b46f65cc55.jpg"
+                     alt="weather description" style="width:100%">
+                     <div class="card-body">
+                      <p class="card-text">weather label</p>
+                      <p class="card-text">High temp Low Temp</p>
+                      <p class="card-text">Precipitation</p>
+                    </div>
                 </div>
-            </div>
-            </div>`
+                </div>
+                </div>`;
+                    }
+                 }).join(' ');
             }
             fetchWeather()
             showWeather()    

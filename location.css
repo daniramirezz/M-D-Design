@@ -250,6 +250,75 @@ section{
     border-color: black;
 }
 
+/* Styling for location page */
+.location{
+    display: grid;
+    height: 40em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em  24em;
+    grid-template-areas: 
+    "left-column right-column";
+    background-color: rgb(240,222,253);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+.maps{
+    margin-top: 9em;
+    height: 25em;
+}
+.weather{
+    margin-top: 9em;
+    height: 25em;
+}
+.row{
+    margin-top: -4em;
+}
+.discount{
+    background-color: antiquewhite;
+    height: 20em;
+}
+#map{
+    height: 700px;
+    width: 100%;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+    background: rgba(252,247,222,0.83) url("") no-repeat local 50% 50%;
+
+}
+/* .container {
+    padding: 2px 16px;
+  } */
+.weatherimg{
+    height: 15em;
+}
+
+.column {
+    width:auto;
+    float: right;
+    padding: 20px;
+    padding-top: 3em ;
+    display:flex;
+    justify-content: center;
+  }
+
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+    background: rgba(252,247,222,0.83) url("") no-repeat local 50% 50%;
+    /* padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 0px; */
+    text-align: center;
+    background-color: white;
+    opacity: 0.94;
+    /* border-radius: 5%; */
+  }
 /* responsive design */
 @media screen and (max-width:1060px){
     .logo2 {
