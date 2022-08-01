@@ -278,7 +278,19 @@ section{
     height: 700px;
     width: 100%;
 }
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+    background: rgba(252,247,222,0.83) url("") no-repeat local 50% 50%;
 
+}
+.container {
+    padding: 2px 16px;
+  }
+.weatherimg{
+    height: 15em;
+}
 /* responsive design */
 @media screen and (max-width:1060px){
     .logo2 {
