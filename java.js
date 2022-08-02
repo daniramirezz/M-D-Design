@@ -13,11 +13,11 @@ allStars.forEach((star,i) =>{
     }
 })
 
-
+35.39384928780973, -80.80765201975048
 function initMap(){
     //map option
     var options= {
-        center:{lat: 35.235608185325866 , lng: -80.8329717935946},
+        center:{lat: 35.39384928780973 , lng: -80.80765201975048},
         zoom: 10
     }
     //new map
@@ -124,18 +124,23 @@ function initMap(){
                 let row = document.querySelector('.weather.row');
                  row.innerHTML=resp.daily
                  .map((day, idx)=> {
-                    if(idx<= 2){
+                    if(idx <= 2){
+                        let dt = new Date(day.dt *1000);
                     return `
                     <div class="column">
-                    <div class="card" style="width: 10vw;">
-                    <h5 class="card-title"> Date </h5>
+                    <div class="card">
+                    <h5 class="card-title">${dt.toDateString()}</h5>
                     <img class="card-img gx2"
-                    src="https://i.pinimg.com/564x/8a/e4/6f/8ae46f8ae5552d09ad8289b46f65cc55.jpg"
-                     alt="weather description" style="width:100%">
+                    src="http://openweathermap.org/img/wn/${
+                        day.weather[0].icon
+                    }@4x.png"
+                     alt="${day.weather[0].main}" style="width:100%">
                      <div class="card-body">
-                      <p class="card-text">weather label</p>
-                      <p class="card-text">High temp Low Temp</p>
-                      <p class="card-text">Precipitation</p>
+                      <p class="card-text">${day.weather[0].main}</p>
+                      <p class="card-text"> High ${day.temp.max}&deg;F</p>
+                      <p class="card-text">Low ${day.temp.min} &deg;F </p>
+                      <p class="card-text"> High Feels Like ${day.feels_like.day}&deg;F</p>
+                      <p class="card-text">Precipitation ${Math.round(day.pop * 100)}%</p>
                     </div>
                 </div>
                 </div>
@@ -143,8 +148,6 @@ function initMap(){
                     }
                  }).join(' ');
             }
-            fetchWeather()
-            showWeather()    
         }
         addMarker({location:{lat: 35.1917349071713 , lng: -80.84283149706101},
             content:`<h2>This is Fredom Park</h2>`,
