@@ -99,10 +99,6 @@ function initMap(){
                 }).join(' ');
             }
         }
-        // let discount = day.weather[0].main = "Rain"? 'You get a discount code rainyday22' : 'looks like nice weather';
-        // console.log(discount)
-        // let label =  day.weather[0].main
-        // console.log(label)
         addMarker({location:{lat: 35.1917349071713 , lng: -80.84283149706101},
             content:`<h2>This is Fredom Park</h2>`,
 
