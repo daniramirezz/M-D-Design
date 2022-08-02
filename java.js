@@ -71,7 +71,7 @@ function initMap(){
                 let row = document.querySelector('.weather.row');
                  row.innerHTML=resp.daily
                  .map((day, idx)=> {
-                    if(idx <= 2){
+                    if(idx <= 5){
                         let dt = new Date(day.dt *1000);
                     return `
                     <div class="column">
