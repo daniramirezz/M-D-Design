@@ -73,6 +73,7 @@ function initMap(){
                  .map((day, idx)=> {
                     if(idx <= 5){
                         let dt = new Date(day.dt *1000);
+                        console.log(day.weather[0].main)
                     return `
                     <div class="column">
                     <div class="card">
@@ -81,20 +82,21 @@ function initMap(){
                     src="http://openweathermap.org/img/wn/${
                         day.weather[0].icon
                     }@4x.png"
-                     alt="${day.weather[0].main}" style="width:100%">
+                     alt=${day.weather[0].main} style="width:100%">
                      <div class="card-body">
                       <p class="card-text">${day.weather[0].main}</p>
                       <p class="card-text"> High ${day.temp.max}&deg;F</p>
                       <p class="card-text">Low ${day.temp.min} &deg;F </p>
                       <p class="card-text"> High Feels Like ${day.feels_like.day}&deg;F</p>
                       <p class="card-text">Precipitation ${Math.round(day.pop * 100)}%</p>
+                      <p class="card-text"> ${day.weather[0].main == ("Rain")? 'Bad weather you get a discount code rainyday22' : 'looks like nice weather'}</p>
+                      
                     </div>
                 </div>
                 </div>
                 </div>`;
                     }
-                 }).join(' ');
-
+                }).join(' ');
             }
         }
         addMarker({location:{lat: 35.1917349071713 , lng: -80.84283149706101},
