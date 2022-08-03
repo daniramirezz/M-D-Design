@@ -173,14 +173,15 @@ section{
 /* Styling for location page */
 .location{
     display: grid;
-    height: 65em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3em  24em;
-    background-color: #b84c65;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5ef3d62db50a68456fea868d/5e3e315c-f31c-4708-a188-170e01198967/IMG_0881.jpg);
+    background-size: cover;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     font-family: 'Barlow Condensed', sans-serif;
+    height: 75em;
 }
 .directions{
     margin-top: 5em;
@@ -188,25 +189,21 @@ section{
 }
 
 .weather{
-    margin-top: 6em;
-    height: 35em;
+    margin-top: 3em;
+    height: 15em;
     margin-left: 4em;
     justify-content: space-between;
     font-family: 'Barlow Condensed', sans-serif;
     /* background-image: url(https://i.pinimg.com/originals/b4/69/56/b46956c67f7369551d4d460e1e4f77d7.jpg); */
 }
 .row{
-    margin-top: -1em;
+    margin-top: 3em;
 }
-.discount{
-    background-color: antiquewhite;
-    height: 20em;
 
-}
 #map{
-    height: 30em;
-    width: 100%;
-    margin-top: 15em;
+    height: 45em;
+    width: 90%;
+    margin-top: 23em;
     margin-left: 2em;
 }
 
@@ -216,10 +213,9 @@ section{
 }
 
 .column {
-    width: auto;
-    padding: 15px;
+    width: 10em;
     padding-top: 3em ;
-    padding-right: 5em;
+    padding-right: 2em;
     display: flex;
     flex-direction: row;
     float: left;
@@ -233,9 +229,12 @@ section{
     text-align: center;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 23px;
+    height: 19.5em;
 
   }
 /* responsive design */
+
+
 @media screen and (max-width:1060px){
     .logo2 {
         margin-top: 8em;
@@ -245,7 +244,17 @@ section{
     .info{
         height: fit-content;
         margin-top: 8em;}
+        .location{
+            height: 110em;
+        }
+
+        .maps{
+            margin-top: 3em;
+        }
 }
+
+
+
 @media screen and (max-width:900px){
     .about-us{
         height: fit-content;
@@ -265,6 +274,7 @@ section{
     height: fit-content;
     width: fit-content;
     margin-top: 7em;}
+
 }
 @media screen and (max-width:770px) {
     body {width: 768px}
@@ -303,12 +313,45 @@ section{
         height: fit-content;
         margin-top: 5em;
     }
+
+    .location{
+        height: 160em;
+    }
+    
+    .directions{
+        font-size: 20px;
+        margin-top: 8em;
+        margin-right: 2em;
+    }
+    .maps{
+        margin-top: -1em;
+        width: 90%;
+        height: 20em;
+    
+    }
+    .card{
+        height: 15em;
+        width: 90%;
+    }
+    .card-text{
+        font-size: 13pt;
+    
+    }
+    .row{
+        margin-top: 2em;
+    }
+    .location{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2em  0em;
+    }
     footer{
-        width: 750px;
+        width: 100%;
         margin: 0;
         padding: 0;
         font-size: 1em;
-    }}
+    }
+    }
+    
 @media screen and (max-width:440px){
     body {width: 425px}
     .wrapper{
@@ -373,13 +416,46 @@ section{
         margin-right: .5em;
 
     }
+
+    .location{
+        height: 220em;
+    }
+    
+    .directions{
+        font-size: 20px;
+        margin-top: 8em;
+        margin-right: 2em;
+    }
+    .maps{
+        margin-top: 1em;
+        width: 90%;
+        height: 20em;
+    
+    }
+    .card{
+        height: 15em;
+        width: 100%;
+    }
+    .card-text{
+        font-size: 13pt;
+    
+    }
+    .row{
+        margin-top: -20em;
+    }
+    .location{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2em  0em;
+    }
     footer{
-        width: 425px;
+        width: 100%;
         margin: 0;
         padding: 0;
         font-size: 1em;
-    }}
-
+    }
+    }
+    
+    
 
 
 @media screen and (max-width:380px) {
@@ -458,12 +534,45 @@ section{
         margin-right: .5em;
 
     }
-    footer{
-        width: 375px;
-        margin: 0;
-        padding: 0;
-        font-size: 1em;
-    }}
+
+.location{
+    height: 207em;
+}
+
+.directions{
+    font-size: 20px;
+    margin-top: 8em;
+    margin-right: 2em;
+}
+.maps{
+    margin-top: 2em;
+    width: 90%;
+    height: 3em;
+
+}
+.card{
+    height: 14em;
+    width: 90%;
+}
+.card-text{
+    font-size: 12pt;
+
+}
+.row{
+    margin-top: -7em;
+}
+.location{
+    grid-template-columns: 1fr;
+}
+footer{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+}
+
+
 
 @media screen and (max-width:325px){
     body {width: 320px}
@@ -531,25 +640,38 @@ section{
         margin-right: .5em;
 
     }
+    .location{
+        height: 195em;
+    }
 
     .directions{
         font-size: 20px;
         margin-top: 8em;
+        margin-right: 2em;
     }
-    #maps{
-        margin-top: 10em;
-        width: 30%;
+    .maps{
+        margin-top: 2em;
+        width: 90%;
+        height: 3em;
 
     }
-    .column{
-        margin-top: 30em ;
+    .card{
+        height: 12em;
+        width: 90%;
+    }
+    .card-text{
+        font-size: 9pt;
+
+    }
+    .row{
+        margin-top: 1em;
     }
     .location{
         grid-template-columns: 1fr;
         grid-template-rows: 2em  0em;
     }
     footer{
-        width: 320px;
+        width: 100%;
         margin: 0;
         padding: 0;
         font-size: 1em;
