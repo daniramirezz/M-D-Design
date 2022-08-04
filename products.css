@@ -57,7 +57,7 @@ nav a{
 }
 
 body{
-  background-image: url(https://secure.img1-fg.wfcdn.com/im/41985558/resize-h445%5Ecompr-r85/7105/71059266/Unadilla+32.7%2527+x+20.5%2522+Carrara+Marble+Wallpaper.jpg);
+  background-color: #C7CEEA;
   background-size: cover;
 }
   
@@ -128,6 +128,7 @@ body{
     font-weight: bold;
 
   }
+
 
   .changeBackground{ 
     background-image: url(https://64.media.tumblr.com/d6bd4f1b7540f61a50d674fdbdddced8/6ecc71fb5c45f07d-8f/s1280x1920/1d9561a2ce2a3d4d87859d037962e3c3950cc974.jpg) ;
